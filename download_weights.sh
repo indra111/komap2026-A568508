@@ -13,14 +13,19 @@ def sha(p):
     with open(p, 'rb') as f:
         for c in iter(lambda: f.read(1 << 24), b''): h.update(c)
     return h.hexdigest()
-for it in m['files']:
+import time
+n = len(m['files'])
+for k, it in enumerate(m['files'], 1):
     p = Path(it['path']); p.parent.mkdir(parents=True, exist_ok=True)
     if p.exists() and sha(p) == it['sha256']:
-        print('ok (exists)', p); continue
-    print(f"download {it['asset']} ({it['bytes'] / 1e6:.0f} MB)", flush=True)
-    subprocess.run(['curl', '-L', '--fail', '--retry', '5', '-o', str(p), it['url']], check=True)
-    if sha(p) != it['sha256']:
+        print(f'[{k}/{n}] ok (이미 있음) {p}', flush=True); continue
+    print(f"[{k}/{n}] download {it['asset']} ({it['bytes'] / 1e6:.0f} MB) ...", flush=True)
+    t = time.time()
+    part = p.with_name(p.name + '.part')   # only a verified file gets the final name
+    subprocess.run(['curl', '-sS', '-L', '--fail', '--retry', '5', '-o', str(part), it['url']], check=True)
+    if sha(part) != it['sha256']:
         sys.exit(f'SHA256 mismatch: {p}')
-    print('ok', p)
+    part.replace(p)
+    print(f'[{k}/{n}] ok {p}  (SHA256 일치, {time.time() - t:.0f}초)', flush=True)
 print('all weights verified')
 EOF
