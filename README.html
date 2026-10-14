@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>분석 프로그램 안내 — 팀서유기 A568508</title>
+<style>
+:root{--ink:#1d2329;--mute:#5b6570;--line:#dde2e8;--bg:#f5f6f8;--card:#fff;--acc:#1b5aa6;--acc-bg:#eaf2fc;--code:#f1f3f6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.7 -apple-system,"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:40px 28px 64px}
+header{margin-bottom:28px}
+.tag{display:inline-block;font-size:13px;color:var(--acc);background:var(--acc-bg);border-radius:20px;padding:3px 12px;margin-bottom:12px}
+h1{font-size:28px;line-height:1.35;margin:0 0 8px}
+header p{margin:0;color:var(--mute)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0 8px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat b{display:block;font-size:24px;line-height:1.2}
+.stat span{font-size:13px;color:var(--mute)}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 28px;margin-top:20px}
+h2{font-size:19px;margin:0 0 14px}
+h3{font-size:16px;margin:18px 0 8px}
+p{margin:8px 0}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 18px 44px}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--acc);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px}
+code,pre{font-family:SFMono-Regular,Consolas,"D2Coding",monospace;font-size:13.5px}
+code{background:var(--code);border-radius:5px;padding:1px 6px}
+pre{background:#1f2630;color:#e7edf3;border-radius:10px;padding:14px 16px;overflow-x:auto;margin:8px 0 0;line-height:1.55}
+pre code{background:none;padding:0;color:inherit}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f3f5f8;font-weight:600}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:6px 0}
+.flow div{flex:1 1 150px;background:var(--acc-bg);border-radius:10px;padding:10px 12px;font-size:14px}
+.flow div b{display:block;font-size:13px;color:var(--acc);margin-bottom:2px}
+.note{background:#fff8e6;border:1px solid #f1dfae;border-radius:10px;padding:12px 16px;font-size:14.5px;margin-top:12px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px;border:1px solid #0002}
+a{color:var(--acc)}
+footer{color:var(--mute);font-size:13px;margin-top:28px;text-align:center}
+@media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}section{padding:20px}}
+</style>
+</head>
+<body><div class="wrap">
+
+<header>
+  <span class="tag">KoMaP 2026 · 접수번호 A568508 · 팀서유기</span>
+  <h1>고탄성 알루미늄 합금 이미지 상 분할 — 분석 프로그램 안내</h1>
+  <p>현미경 사진에서 Al 기지 · 초정 Si · Al₃Ni · 공정 Si 네 조직을 픽셀 단위로 구분하고, 조직별 면적 분율을 계산합니다.</p>
+  <div class="stats">
+    <div class="stat"><b>79.90%</b><span>검증 mIoU (validation 20장)</span></div>
+    <div class="stat"><b>70장</b><span>학습 데이터 (주최 측 train만)</span></div>
+    <div class="stat"><b>8 + 2</b><span>teacher 모델 + 잔차 보정기</span></div>
+    <div class="stat"><b>약 10분</b><span>test 10장 추론 (RTX A5000)</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>빠른 시작</h2>
+  <ol class="steps">
+    <li><b>개발 환경 설치</b> — NVIDIA GPU(24GB 권장, CUDA 12.8 드라이버)가 필요합니다.
+      <pre><code>conda env create -f environment.yml
+conda activate komap-2026-team-seoyugi</code></pre></li>
+    <li><b>학습된 가중치 받기</b> — 10개(5.3GB)를 GitHub Release에서 받아 SHA256까지 자동 검증합니다.
+      <pre><code>./download_weights.sh</code></pre></li>
+    <li><b>데이터 배치</b> — 주최 측 <code>train.zip</code>, <code>valid.zip</code>, <code>test.zip</code>을 아래 위치에 풉니다.
+      <pre><code>data/extracted/train/{images,masks}/
+data/extracted/valid/{images,masks}/
+data/extracted/test/images/</code></pre></li>
+    <li><b>실행</b> — 제출 결과를 재현하거나 웹 화면에서 사진을 올려 봅니다.
+      <pre><code>./run_predict.sh test outputs/test_masks   # test 10장 마스크 재현
+python app.py                              # 웹 화면 → http://localhost:7860</code></pre></li>
+  </ol>
+</section>
+
+<section>
+  <h2>실행 방법</h2>
+  <table>
+    <tr><th style="width:22%">목적</th><th>명령</th><th style="width:30%">결과</th></tr>
+    <tr><td>test 결과 재현</td><td><code>./run_predict.sh test outputs/test_masks</code></td><td>10장 마스크 (<code>*_mask.png</code>)</td></tr>
+    <tr><td>검증 점수 재현</td><td><code>./run_predict.sh val outputs/val_masks</code></td><td>20장 마스크 + <code>prediction-manifest.json</code>의 mIoU</td></tr>
+    <tr><td>임의 사진 폴더</td><td><code>python predict_opus_champion.py --recipe review/opus/recipe-lov16-2head-al3ni110-crfbw05-psi100.json --images &lt;폴더&gt; --work /tmp/w --output &lt;출력&gt;</code></td><td>폴더의 PNG·JPG·TIF 전부</td></tr>
+    <tr><td>웹 화면</td><td><code>python app.py</code> → <a href="http://localhost:7860">http://localhost:7860</a></td><td>업로드 → 마스크·겹쳐 보기·조직별 면적 분율·입자 수, zip 내려받기</td></tr>
+  </table>
+  <h3>출력 색상</h3>
+  <p><span class="sw" style="background:rgb(153,127,76)"></span>Al 기지 (153,127,76) &nbsp;
+     <span class="sw" style="background:rgb(76,178,76)"></span>초정 Si (76,178,76) &nbsp;
+     <span class="sw" style="background:rgb(25,76,153)"></span>Al₃Ni (25,76,153) &nbsp;
+     <span class="sw" style="background:rgb(204,204,204)"></span>공정 Si (204,204,204)</p>
+  <div class="note">웹 화면은 추가 패키지 없이 Python 표준 HTTP 서버로 동작하며, 올린 사진은 이 컴퓨터 밖으로 나가지 않습니다(<code>app_jobs/</code>에 저장). 웹 화면과 <code>run_predict.sh</code>는 같은 추론 코드를 쓰므로 같은 이미지에 대해 바이트 단위로 같은 마스크를 냅니다.</div>
+</section>
+
+<section>
+  <h2>모델 구성</h2>
+  <div class="flow">
+    <div><b>① 배율 정규화</b>폭 800px 미만은 ×1.85로 관측 배율을 맞추고, 전체를 ×1.5(HRNet 하나는 ×2.0)로 키워 추론</div>
+    <div><b>② teacher 8개 결합</b>각 모델 D4 8방향 평균 확률을 가중 결합</div>
+    <div><b>③ 잔차 보정기 2개</b>결합 확률을 다듬는 후단 모델, 두 출력을 평균</div>
+    <div><b>④ 후처리</b>Al₃Ni ×1.1 → DenseCRF(0.5) → RankIoU → 100px 미만 초정 Si 조각을 공정 Si로</div>
+  </div>
+  <h3>teacher 구성과 비중</h3>
+  <table>
+    <tr><th>모델</th><th>특징</th><th style="width:14%">비중</th></tr>
+    <tr><td>DINOv2 Large</td><td>LLRD + Lovász 손실 16 epoch 미세조정</td><td>15.0%</td></tr>
+    <tr><td>DINOv3 Large</td><td>가중치 지수이동평균(EMA)</td><td>9.4%</td></tr>
+    <tr><td>DINOv2 Large</td><td>30 epoch</td><td>9.4%</td></tr>
+    <tr><td>HRNet-W48 OCR ×1.5</td><td>seed 2종 + 30 epoch, 3개</td><td>9.4% × 3</td></tr>
+    <tr><td>HRNet-W48 OCR ×2.0</td><td>더 큰 배율로 작은 조직 포착</td><td>18.9%</td></tr>
+    <tr><td>DINOv2 Base</td><td>HE50 명암 보정 입력</td><td>18.9%</td></tr>
+  </table>
+  <p style="color:var(--mute);font-size:14px">구성 전체는 <code>review/opus/recipe-lov16-2head-al3ni110-crfbw05-psi100.json</code>에 있습니다.</p>
+</section>
+
+<section>
+  <h2>파일 구성</h2>
+  <table>
+    <tr><th style="width:38%">경로</th><th>내용</th></tr>
+    <tr><td><code>run_predict.sh</code></td><td><b>실행 파일.</b> test/val 마스크 생성</td></tr>
+    <tr><td><code>app.py</code></td><td>로컬 웹 화면</td></tr>
+    <tr><td><code>download_weights.sh</code>, <code>weights-manifest.json</code></td><td>가중치 다운로드·SHA256 검증</td></tr>
+    <tr><td><code>predict_opus_champion.py</code></td><td>최종 추론기 (teacher → 보정기 → 후처리)</td></tr>
+    <tr><td><code>review/opus/recipe-*.json</code></td><td>최종 모델 구성 (가중치 경로·비중·후처리 설정)</td></tr>
+    <tr><td><code>scale_norm.py</code>, <code>opus_models.py</code></td><td>배율 정규화, 구성원 모델 생성·불러오기</td></tr>
+    <tr><td><code>train_scale_norm_large.py</code></td><td>구성원 학습기 (<code>--family</code>, <code>--ema</code>, <code>--llrd</code>, <code>--lovasz</code>, <code>--init</code>, <code>--epochs</code>, <code>--seed</code>)</td></tr>
+    <tr><td><code>train_opus_refiner.py</code> 등</td><td>잔차 보정기 학습</td></tr>
+    <tr><td><code>eval_teacher_mix.py</code></td><td>구성원 캐시·결합·분율 보정 평가</td></tr>
+    <tr><td><code>environment.yml</code></td><td>개발 환경 (Python 3.12.3, PyTorch 2.10 CUDA 12.8)</td></tr>
+    <tr><td><code>.crf-deps/</code></td><td>검증된 pydensecrf 1.0 빌드 (Linux x86_64, CPython 3.12)</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>구성원 재학습</h2>
+  <p>모든 학습은 train 70장만 사용했고, validation 20장은 모델 선택에만 사용했습니다. 공개 사전학습 가중치(DINOv2·DINOv3·HRNet)는 학습 시작 시에만 필요하며(<code>data/pretrained/*</code>), 추론은 Release의 <code>best.pth</code>만 씁니다.</p>
+  <pre><code>python train_scale_norm_large.py --family dinov3 --base-scale 1.5 --ema 0.999 --run runs/opus-scale-norm-dinov3-x1p5-ema
+python train_scale_norm_large.py --family large --base-scale 1.5 --seed 20261016 --ema 0.999 --llrd 0.9 --llrd-lr 6e-5 --run runs/opus-scale-norm-large-x1p5-ema-llrd
+python train_scale_norm_large.py --family large --base-scale 1.5 --seed 20261092 --init runs/opus-scale-norm-large-x1p5-ema-llrd/best.pth \
+  --lovasz 0.5 --ema 0.999 --llrd 0.9 --llrd-lr 1e-5 --head-lr 1e-4 --epochs 16 --run runs/opus-scale-norm-large-x1p5-llrd-lovasz-ft16
+python train_scale_norm_large.py --family large --base-scale 1.5 --epochs 30 --seed 20261013 --run runs/opus-scale-norm-large-x1p5-e30
+python train_scale_norm_large.py --family hrnet --base-scale 1.5 --run runs/opus-scale-norm-hrnet-x1p5-v1
+python train_scale_norm_large.py --family hrnet --base-scale 1.5 --seed 20261012 --run runs/opus-scale-norm-hrnet-x1p5-s2
+python train_scale_norm_large.py --family hrnet --base-scale 1.5 --seed 20261042 --epochs 30 --run runs/opus-scale-norm-hrnet-x1p5-e30-s5
+python train_scale_norm_large.py --family hrnet --base-scale 2.0 --seed 20261043 --run runs/opus-scale-norm-hrnet-x2p0-s6</code></pre>
+</section>
+
+<footer>
+  코드: <a href="https://github.com/indra111/komap2026-A568508">github.com/indra111/komap2026-A568508</a> ·
+  가중치: <a href="https://github.com/indra111/komap2026-A568508/releases/tag/v1.0">Release v1.0</a>
+</footer>
+</div></body>
+</html>
