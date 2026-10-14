@@ -1,0 +1,7 @@
+# model weights are published as GitHub Release assets (download_weights.sh)
+*.pth
+outputs/
+app_jobs/
+__pycache__/
+data/extracted/
+.DS_Store

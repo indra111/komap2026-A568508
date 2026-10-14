@@ -1,0 +1,14 @@
+pydensecrf-1.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+pydensecrf-1.0.dist-info/METADATA,sha256=uf84NUv0iaFmmxO0CGv6j92TEwFVWLJbrQDva8hpebc,945
+pydensecrf-1.0.dist-info/RECORD,,
+pydensecrf-1.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydensecrf-1.0.dist-info/WHEEL,sha256=UKM62ksD4jd3M6k5acFAaw8CHnQfpjto_KljRXbypP0,104
+pydensecrf-1.0.dist-info/direct_url.json,sha256=CAnj7ZtuiUeLGwIoq6AlqMCG6fYjhtfzd8zu7UekK4s,318
+pydensecrf-1.0.dist-info/licenses/LICENSE,sha256=HmLcdzJB1mGf4KJ-RMeovP8HqtFqxQqh-dkTKT0UkO8,1079
+pydensecrf-1.0.dist-info/top_level.txt,sha256=K_podHejDPtYkoV-JEAW_EjDsMi2mnTpHfHhFOtJsOE,11
+pydensecrf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydensecrf/__pycache__/__init__.cpython-312.pyc,,
+pydensecrf/__pycache__/utils.cpython-312.pyc,,
+pydensecrf/densecrf.cpython-312-x86_64-linux-gnu.so,sha256=WOE2kqo7xMVUSy29MpETcdWkzMadrJqEI_W0r9-gmRI,11665464
+pydensecrf/eigen.cpython-312-x86_64-linux-gnu.so,sha256=N2BeEYy7RjatLqGZMjVtgT1Gd6HZE9iWc3_LU7hK5Wo,1485752
+pydensecrf/utils.py,sha256=d424mBBapXaJ3r1lIpBslURjFprdkMYt6h3pM9yDhdc,6852

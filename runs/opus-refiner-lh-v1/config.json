@@ -1,0 +1,20 @@
+{
+  "run": "runs/opus-refiner-lh-v1",
+  "work": "/dev/shm/komap-opus-eval/train-members",
+  "val_work": "/dev/shm/komap-opus-eval/members",
+  "train_weights": "{\"large_x1p5\":0.5,\"hrnet_x1p5\":0.25,\"base_he50\":0.25}",
+  "val_weights": "{\"large_x1p5\":0.5,\"hrnet_x1p5\":0.25,\"base_he50\":0.25}",
+  "init": "runs/target100-focused-warm-uniform-v1/best.pth",
+  "method": "uniform",
+  "lr": 0.0001,
+  "batch": 16,
+  "epochs": 6,
+  "steps": 300,
+  "seed": 20261014,
+  "architecture": "focused_upsampled_strict_residual_bf16_v1",
+  "loss": "training_objective(method) from Stage45",
+  "sampler": "FocusedCachedSampler spatial_noise",
+  "teacher_train": "in-sample member caches",
+  "validation_used_for_training": false,
+  "createdAt": "2026-10-11T05:33:25.457623+00:00"
+}

@@ -1,0 +1,40 @@
+{
+  "family": "hrnet",
+  "ema": 0.0,
+  "llrd": 0.0,
+  "llrd_lr": null,
+  "epochs": 20,
+  "steps": 300,
+  "batch": 2,
+  "patch": 512,
+  "seed": 20261043,
+  "encoder_lr": 2e-05,
+  "decoder_lr": 0.001,
+  "augmentation": "dihedral_only",
+  "lowres_boost": 1,
+  "init": null,
+  "lovasz": 0.0,
+  "head_lr": 0.001,
+  "scale_normalization": {
+    "small_width_lt": 800,
+    "factor": 1.85,
+    "base": 2.0
+  },
+  "control_run": "runs/target100-hrnet-ocr-v1",
+  "manifest_sha256": "40f713b3f0e874aee993cc3880340086571321598cea6add3b59e021cd8dd7ef",
+  "source_sha256": {
+    "scale_norm.py": "922507907044234ce76fbd2696c7957134c5bb0690f650088521422f4b6533f7",
+    "train_scale_norm_large.py": "55565a68c1d8aea881195b0a15ddd8d0c9ab0744d0d407519f8030879d674d07",
+    "opus_models.py": "1d321de7ba7a47044835897835bc94fbef4c9466067107d56ee59f4c22af31e3",
+    "dinov2_large_model.py": "d41cba79968f5b62b1303c2aeeadecaee60424cb171a4c4e844cb5e628082623",
+    "large_dino_model.py": "9f8c9c5d4d94a779f78b3a25a41cd073fc91e45e9742f788be01ef10b337d57e",
+    "hrnet_ocr_model.py": "02912950c160a77452ff52aa9bee92df36627936103cffb028f34db4f306bd42",
+    "dinov3_large_model.py": "9179ad654c8e5b20faea01627dbb49f7c10b8405eb57dee7540ec9d27a54dc72",
+    "dinov3_convnext_model.py": "c6655a0ce7c80a785190ddfaef29fe9998ff81832cfda3ce1e88ca5f4068f87a",
+    "dino_model.py": "00a2c4351a3228b4f65d1ea61a076018d10e5706a5bc7c84d1e07e672468e87e",
+    "expansion.py": "963a04ba2950f582613e3da7ff676b7af71c07595de6069355b4ba48ff3b9803",
+    "context_model.py": "de769d9c77f525ec07f9d9387279b58899bfb019d865a9e9fa4db88f23d5028b",
+    "core.py": "52f8c79686b0f037b1dc2847bb5f75f3afe75490aa20c1592c8833101d94cf72",
+    "target80_methods.py": "95e71775b473b0524ced9a9cddaa885c6bc4c66f21dbf54a3dcde5001aaa6c53"
+  }
+}

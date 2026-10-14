@@ -1,0 +1,45 @@
+{
+  "provenance": "official_komap_2026",
+  "model": "dpt_dinov2_base_detail_bf16",
+  "initialization": "dinov2",
+  "patch": 512,
+  "overlap": 128,
+  "epochs": 20,
+  "steps": 300,
+  "batch": 2,
+  "seed": 20261007,
+  "encoder_lr": 2e-05,
+  "decoder_lr": 0.001,
+  "scheduler": "cosine, minimum factor 0.05",
+  "loss": "cross_entropy_plus_all_class_dice",
+  "augmentation": "dihedral_only",
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "manifest_sha256": "e3a2517e2f5b88b278b9a7820202a505ca54d235fefd5ed7a0155916cf63f4a0",
+  "official_split_preserved": true,
+  "precision": "bfloat16_without_gradient_scaling",
+  "resume_supported": true,
+  "source_sha256": {
+    "core.py": "52f8c79686b0f037b1dc2847bb5f75f3afe75490aa20c1592c8833101d94cf72",
+    "run.py": "3f20c475957e86d141c0c7eaa1179060a598bf70c77c9b2532cae24ac3e7926d",
+    "expansion.py": "cd8fb6da963faa6bcdcbc071f27b0287a10bb821ae675b12185037dc7d334a60",
+    "context_model.py": "de769d9c77f525ec07f9d9387279b58899bfb019d865a9e9fa4db88f23d5028b",
+    "pretrained_model.py": "4fd7deed308c2513a4744a91e10de72fd67c50660893d45163b3b3d4a7ad8b9b",
+    "train_pretrained.py": "f4be77aecc084f7a0495ff66e0320eab2c738d84e6bf457b114ceb20fbc61052",
+    "dino_model.py": "00a2c4351a3228b4f65d1ea61a076018d10e5706a5bc7c84d1e07e672468e87e",
+    "train_dino.py": "c99acd0f5e7bbf3c050f483d44451da4224b90b84eaf9d541144d8f3c30067b1",
+    "image_processing.py": "e11890c946aa5189c262e50ea5bc7d0d9798b7a9f3f520f228e32087808a9611",
+    "large_dino_model.py": "9f8c9c5d4d94a779f78b3a25a41cd073fc91e45e9742f788be01ef10b337d57e",
+    "train_dino_base.py": "670c503c884082143100b749da6a4be3a1c18ea6d32da0704ff24c6759005f79"
+  }
+}

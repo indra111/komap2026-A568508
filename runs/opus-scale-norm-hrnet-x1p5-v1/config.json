@@ -1,0 +1,30 @@
+{
+  "family": "hrnet",
+  "epochs": 20,
+  "steps": 300,
+  "batch": 2,
+  "patch": 512,
+  "seed": 20261007,
+  "encoder_lr": 2e-05,
+  "decoder_lr": 0.001,
+  "augmentation": "dihedral_only",
+  "scale_normalization": {
+    "small_width_lt": 800,
+    "factor": 1.85,
+    "base": 1.5
+  },
+  "control_run": "runs/target100-hrnet-ocr-v1",
+  "manifest_sha256": "40f713b3f0e874aee993cc3880340086571321598cea6add3b59e021cd8dd7ef",
+  "source_sha256": {
+    "scale_norm.py": "7e04d1035ab249347790e5edc0f7ffe5e8c2e65cdd1a1e9e530e4a1ccab16f79",
+    "train_scale_norm_large.py": "b91828ab8fdeb583dd0b78b168b07c02fc7ac8837235d87c937aea435f20d8ce",
+    "dinov2_large_model.py": "d41cba79968f5b62b1303c2aeeadecaee60424cb171a4c4e844cb5e628082623",
+    "large_dino_model.py": "9f8c9c5d4d94a779f78b3a25a41cd073fc91e45e9742f788be01ef10b337d57e",
+    "hrnet_ocr_model.py": "02912950c160a77452ff52aa9bee92df36627936103cffb028f34db4f306bd42",
+    "dino_model.py": "00a2c4351a3228b4f65d1ea61a076018d10e5706a5bc7c84d1e07e672468e87e",
+    "expansion.py": "cd8fb6da963faa6bcdcbc071f27b0287a10bb821ae675b12185037dc7d334a60",
+    "context_model.py": "de769d9c77f525ec07f9d9387279b58899bfb019d865a9e9fa4db88f23d5028b",
+    "core.py": "52f8c79686b0f037b1dc2847bb5f75f3afe75490aa20c1592c8833101d94cf72",
+    "target80_methods.py": "95e71775b473b0524ced9a9cddaa885c6bc4c66f21dbf54a3dcde5001aaa6c53"
+  }
+}

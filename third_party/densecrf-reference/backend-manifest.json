@@ -1,0 +1,62 @@
+{
+  "source_manifest_sha256": "b4223f3cfa7c4a4582293eb4501e8f6480dbe2a01839a751c01cfe9533ef1804",
+  "source_revision": "2723c7fa4f2ead16ae1ce3d8afe977724bb8f87f",
+  "source_archive_sha256": "4274d2bd4d70d0ca4b49221f4981b6482141f55bafe299e4ac1ce498f446b65d",
+  "wheel_path": "third_party/densecrf-reference/wheelhouse/pydensecrf-1.0-cp312-cp312-linux_x86_64.whl",
+  "wheel_sha256": "d4ab193497c4d7823812bf4d447ecb6f915ee2166293e450122a740b7022bc31",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "numpy": "2.2.6",
+  "build_isolated": true,
+  "project_venv_not_modified": true,
+  "installed_files": [
+    {
+      "path": ".crf-deps/pydensecrf/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".crf-deps/pydensecrf/densecrf.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "58e13692aa3bc4c5544b2dbd32911371d5a4ccc69dac9a8423f5b4afdfa09912"
+    },
+    {
+      "path": ".crf-deps/pydensecrf/eigen.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "37605e118cbb4636ad2ea19932356d813d4677a1d913d896737fcb53b84ae56a"
+    },
+    {
+      "path": ".crf-deps/pydensecrf/utils.py",
+      "sha256": "778db898105aa57689debd6522906c954463169add90c62dea1de933dc8385d7"
+    },
+    {
+      "path": ".crf-deps/pydensecrf-1.0.dist-info/INSTALLER",
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    {
+      "path": ".crf-deps/pydensecrf-1.0.dist-info/METADATA",
+      "sha256": "b9ff38354bf489a1669b13b4086bfa8fdd9313015558b25bad00ef6bc86979b7"
+    },
+    {
+      "path": ".crf-deps/pydensecrf-1.0.dist-info/RECORD",
+      "sha256": "12eb868d81f930bdc491db9dfefc208c5c923e2fb56ae52bc70f4662605242fd"
+    },
+    {
+      "path": ".crf-deps/pydensecrf-1.0.dist-info/REQUESTED",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".crf-deps/pydensecrf-1.0.dist-info/WHEEL",
+      "sha256": "50a33ada4b03e2377733a93969c1406b0f021e741fa63b68fca9634576f2a4fd"
+    },
+    {
+      "path": ".crf-deps/pydensecrf-1.0.dist-info/direct_url.json",
+      "sha256": "0809e3ed9b6e89478b1b0228aba025a8c086e9f62386d7f377cceeed47a42b8b"
+    },
+    {
+      "path": ".crf-deps/pydensecrf-1.0.dist-info/licenses/LICENSE",
+      "sha256": "1e62dc773241d6619fe0a27e44c7a8bcff07aad16ac50aa1f9d913293d1490ef"
+    },
+    {
+      "path": ".crf-deps/pydensecrf-1.0.dist-info/top_level.txt",
+      "sha256": "2bfa687477a30cfb5892857e244016fc48c3b0c8b69a74e91df1e114eb49b0e1"
+    }
+  ]
+}

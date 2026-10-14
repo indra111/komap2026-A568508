@@ -1,0 +1,744 @@
+{
+ "schema": 1,
+ "provenance": "official_komap_2026",
+ "source": "https://komap.ai/front/competition2026/down1",
+ "expected_counts": {
+  "train": 70,
+  "val": 20,
+  "test": 10
+ },
+ "classes": [
+  {
+   "id": 0,
+   "name": "Al matrix",
+   "color": [
+    153,
+    127,
+    76
+   ]
+  },
+  {
+   "id": 1,
+   "name": "Primary Si",
+   "color": [
+    76,
+    178,
+    76
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Al3Ni",
+   "color": [
+    25,
+    76,
+    153
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Eutectic Si",
+   "color": [
+    204,
+    204,
+    204
+   ]
+  }
+ ],
+ "mask_encoding": "rgb",
+ "absent_class_policy": "skip",
+ "metric_rule_status": "provisional",
+ "metric_note": "All four classes included. Skip only union=0 provisionally; official empty-class rule still unconfirmed. Scores are image-wise mean IoU.",
+ "items": [
+  {
+   "id": "A101_step3_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A101_step3_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A101_step3_sample3_mask.png"
+  },
+  {
+   "id": "A106_step4_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A106_step4_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A106_step4_sample1_mask.png"
+  },
+  {
+   "id": "A108_step2_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A108_step2_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A108_step2_sample2_mask.png"
+  },
+  {
+   "id": "A109_step1_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A109_step1_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A109_step1_sample3_mask.png"
+  },
+  {
+   "id": "A111_step1_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A111_step1_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A111_step1_sample2_mask.png"
+  },
+  {
+   "id": "A111_step3_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A111_step3_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A111_step3_sample4_mask.png"
+  },
+  {
+   "id": "A118_step2_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A118_step2_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A118_step2_sample1_mask.png"
+  },
+  {
+   "id": "A121_step2_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A121_step2_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A121_step2_sample2_mask.png"
+  },
+  {
+   "id": "A123_step1_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A123_step1_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A123_step1_sample1_mask.png"
+  },
+  {
+   "id": "A123_step4_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A123_step4_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A123_step4_sample2_mask.png"
+  },
+  {
+   "id": "A125_step2_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A125_step2_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A125_step2_sample1_mask.png"
+  },
+  {
+   "id": "A130_step1_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A130_step1_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A130_step1_sample1_mask.png"
+  },
+  {
+   "id": "A137_step4_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A137_step4_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A137_step4_sample2_mask.png"
+  },
+  {
+   "id": "A138_step4_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A138_step4_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A138_step4_sample3_mask.png"
+  },
+  {
+   "id": "A139_step3_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A139_step3_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A139_step3_sample4_mask.png"
+  },
+  {
+   "id": "A139_step4_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A139_step4_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A139_step4_sample3_mask.png"
+  },
+  {
+   "id": "A140_step4_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A140_step4_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A140_step4_sample2_mask.png"
+  },
+  {
+   "id": "A146_step2_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A146_step2_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A146_step2_sample1_mask.png"
+  },
+  {
+   "id": "A147_step4_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A147_step4_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A147_step4_sample4_mask.png"
+  },
+  {
+   "id": "A150_step4_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A150_step4_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A150_step4_sample1_mask.png"
+  },
+  {
+   "id": "A152_step2_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A152_step2_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A152_step2_sample1_mask.png"
+  },
+  {
+   "id": "A153_step1_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A153_step1_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A153_step1_sample4_mask.png"
+  },
+  {
+   "id": "A154_step2_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A154_step2_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A154_step2_sample3_mask.png"
+  },
+  {
+   "id": "A155_step3_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A155_step3_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A155_step3_sample2_mask.png"
+  },
+  {
+   "id": "A156_step4_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A156_step4_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A156_step4_sample1_mask.png"
+  },
+  {
+   "id": "A156_step4_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A156_step4_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A156_step4_sample2_mask.png"
+  },
+  {
+   "id": "A159_step4_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A159_step4_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A159_step4_sample4_mask.png"
+  },
+  {
+   "id": "A15_step1_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A15_step1_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A15_step1_sample1_mask.png"
+  },
+  {
+   "id": "A164_step1_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A164_step1_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A164_step1_sample2_mask.png"
+  },
+  {
+   "id": "A164_step4_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A164_step4_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A164_step4_sample1_mask.png"
+  },
+  {
+   "id": "A166_step4_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A166_step4_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A166_step4_sample3_mask.png"
+  },
+  {
+   "id": "A167_step3_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A167_step3_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A167_step3_sample4_mask.png"
+  },
+  {
+   "id": "A16_step4_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A16_step4_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A16_step4_sample4_mask.png"
+  },
+  {
+   "id": "A181_step4_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A181_step4_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A181_step4_sample4_mask.png"
+  },
+  {
+   "id": "A182_step4_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A182_step4_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A182_step4_sample3_mask.png"
+  },
+  {
+   "id": "A187_step2_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A187_step2_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A187_step2_sample1_mask.png"
+  },
+  {
+   "id": "A187_step4_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A187_step4_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A187_step4_sample4_mask.png"
+  },
+  {
+   "id": "A188_step4_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A188_step4_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A188_step4_sample1_mask.png"
+  },
+  {
+   "id": "A18_step2_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A18_step2_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A18_step2_sample1_mask.png"
+  },
+  {
+   "id": "A191_step3_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A191_step3_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A191_step3_sample1_mask.png"
+  },
+  {
+   "id": "A191_step4_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A191_step4_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A191_step4_sample1_mask.png"
+  },
+  {
+   "id": "A200_step4_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A200_step4_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A200_step4_sample3_mask.png"
+  },
+  {
+   "id": "A201_step3_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A201_step3_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A201_step3_sample1_mask.png"
+  },
+  {
+   "id": "A201_step3_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A201_step3_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A201_step3_sample4_mask.png"
+  },
+  {
+   "id": "A21_step2_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A21_step2_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A21_step2_sample4_mask.png"
+  },
+  {
+   "id": "A222_step2_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A222_step2_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A222_step2_sample2_mask.png"
+  },
+  {
+   "id": "A224_step1_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A224_step1_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A224_step1_sample2_mask.png"
+  },
+  {
+   "id": "A224_step4_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A224_step4_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A224_step4_sample2_mask.png"
+  },
+  {
+   "id": "A2_step4_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A2_step4_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A2_step4_sample1_mask.png"
+  },
+  {
+   "id": "A39_step2_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A39_step2_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A39_step2_sample3_mask.png"
+  },
+  {
+   "id": "A40_step3_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A40_step3_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A40_step3_sample4_mask.png"
+  },
+  {
+   "id": "A49_step2_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A49_step2_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A49_step2_sample2_mask.png"
+  },
+  {
+   "id": "A51_step4_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A51_step4_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A51_step4_sample4_mask.png"
+  },
+  {
+   "id": "A55_step3_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A55_step3_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A55_step3_sample4_mask.png"
+  },
+  {
+   "id": "A57_step1_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A57_step1_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A57_step1_sample3_mask.png"
+  },
+  {
+   "id": "A61_step2_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A61_step2_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A61_step2_sample2_mask.png"
+  },
+  {
+   "id": "A64_step2_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A64_step2_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A64_step2_sample3_mask.png"
+  },
+  {
+   "id": "A66_step3_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A66_step3_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A66_step3_sample2_mask.png"
+  },
+  {
+   "id": "A69_step4_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A69_step4_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A69_step4_sample4_mask.png"
+  },
+  {
+   "id": "A78_step4_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A78_step4_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A78_step4_sample1_mask.png"
+  },
+  {
+   "id": "A7_step1_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A7_step1_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A7_step1_sample2_mask.png"
+  },
+  {
+   "id": "A7_step4_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A7_step4_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A7_step4_sample3_mask.png"
+  },
+  {
+   "id": "A83_step1_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A83_step1_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A83_step1_sample2_mask.png"
+  },
+  {
+   "id": "A87_step2_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A87_step2_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A87_step2_sample2_mask.png"
+  },
+  {
+   "id": "A89_step1_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A89_step1_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A89_step1_sample2_mask.png"
+  },
+  {
+   "id": "A8_step2_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A8_step2_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A8_step2_sample3_mask.png"
+  },
+  {
+   "id": "A8_step3_sample3",
+   "split": "train",
+   "image": "extracted/train/images/A8_step3_sample3_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A8_step3_sample3_mask.png"
+  },
+  {
+   "id": "A94_step4_sample2",
+   "split": "train",
+   "image": "extracted/train/images/A94_step4_sample2_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A94_step4_sample2_mask.png"
+  },
+  {
+   "id": "A96_step1_sample1",
+   "split": "train",
+   "image": "extracted/train/images/A96_step1_sample1_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A96_step1_sample1_mask.png"
+  },
+  {
+   "id": "A98_step2_sample4",
+   "split": "train",
+   "image": "extracted/train/images/A98_step2_sample4_image.png",
+   "group": null,
+   "mask": "extracted/train/masks/A98_step2_sample4_mask.png"
+  },
+  {
+   "id": "A117_step4_sample2",
+   "split": "val",
+   "image": "extracted/valid/images/A117_step4_sample2_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A117_step4_sample2_mask.png"
+  },
+  {
+   "id": "A11_step1_sample4",
+   "split": "val",
+   "image": "extracted/valid/images/A11_step1_sample4_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A11_step1_sample4_mask.png"
+  },
+  {
+   "id": "A11_step2_sample4",
+   "split": "val",
+   "image": "extracted/valid/images/A11_step2_sample4_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A11_step2_sample4_mask.png"
+  },
+  {
+   "id": "A125_step1_sample4",
+   "split": "val",
+   "image": "extracted/valid/images/A125_step1_sample4_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A125_step1_sample4_mask.png"
+  },
+  {
+   "id": "A153_step3_sample3",
+   "split": "val",
+   "image": "extracted/valid/images/A153_step3_sample3_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A153_step3_sample3_mask.png"
+  },
+  {
+   "id": "A170_step4_sample3",
+   "split": "val",
+   "image": "extracted/valid/images/A170_step4_sample3_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A170_step4_sample3_mask.png"
+  },
+  {
+   "id": "A181_step1_sample1",
+   "split": "val",
+   "image": "extracted/valid/images/A181_step1_sample1_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A181_step1_sample1_mask.png"
+  },
+  {
+   "id": "A186_step2_sample2",
+   "split": "val",
+   "image": "extracted/valid/images/A186_step2_sample2_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A186_step2_sample2_mask.png"
+  },
+  {
+   "id": "A191_step4_sample3",
+   "split": "val",
+   "image": "extracted/valid/images/A191_step4_sample3_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A191_step4_sample3_mask.png"
+  },
+  {
+   "id": "A40_step3_sample3",
+   "split": "val",
+   "image": "extracted/valid/images/A40_step3_sample3_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A40_step3_sample3_mask.png"
+  },
+  {
+   "id": "A42_step2_sample4",
+   "split": "val",
+   "image": "extracted/valid/images/A42_step2_sample4_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A42_step2_sample4_mask.png"
+  },
+  {
+   "id": "A44_step4_sample3",
+   "split": "val",
+   "image": "extracted/valid/images/A44_step4_sample3_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A44_step4_sample3_mask.png"
+  },
+  {
+   "id": "A55_step2_sample1",
+   "split": "val",
+   "image": "extracted/valid/images/A55_step2_sample1_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A55_step2_sample1_mask.png"
+  },
+  {
+   "id": "A59_step3_sample1",
+   "split": "val",
+   "image": "extracted/valid/images/A59_step3_sample1_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A59_step3_sample1_mask.png"
+  },
+  {
+   "id": "A63_step1_sample4",
+   "split": "val",
+   "image": "extracted/valid/images/A63_step1_sample4_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A63_step1_sample4_mask.png"
+  },
+  {
+   "id": "A67_step1_sample1",
+   "split": "val",
+   "image": "extracted/valid/images/A67_step1_sample1_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A67_step1_sample1_mask.png"
+  },
+  {
+   "id": "A71_step2_sample1",
+   "split": "val",
+   "image": "extracted/valid/images/A71_step2_sample1_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A71_step2_sample1_mask.png"
+  },
+  {
+   "id": "A72_step4_sample4",
+   "split": "val",
+   "image": "extracted/valid/images/A72_step4_sample4_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A72_step4_sample4_mask.png"
+  },
+  {
+   "id": "A74_step3_sample4",
+   "split": "val",
+   "image": "extracted/valid/images/A74_step3_sample4_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A74_step3_sample4_mask.png"
+  },
+  {
+   "id": "A7_step1_sample4",
+   "split": "val",
+   "image": "extracted/valid/images/A7_step1_sample4_image.png",
+   "group": null,
+   "mask": "extracted/valid/masks/A7_step1_sample4_mask.png"
+  },
+  {
+   "id": "A107_step1_sample3",
+   "split": "test",
+   "image": "extracted/test/images/A107_step1_sample3_image.png",
+   "group": null
+  },
+  {
+   "id": "A122_step4_sample1",
+   "split": "test",
+   "image": "extracted/test/images/A122_step4_sample1_image.png",
+   "group": null
+  },
+  {
+   "id": "A124_step4_sample3",
+   "split": "test",
+   "image": "extracted/test/images/A124_step4_sample3_image.png",
+   "group": null
+  },
+  {
+   "id": "A127_step3_sample2",
+   "split": "test",
+   "image": "extracted/test/images/A127_step3_sample2_image.png",
+   "group": null
+  },
+  {
+   "id": "A133_step4_sample1",
+   "split": "test",
+   "image": "extracted/test/images/A133_step4_sample1_image.png",
+   "group": null
+  },
+  {
+   "id": "A167_step3_sample3",
+   "split": "test",
+   "image": "extracted/test/images/A167_step3_sample3_image.png",
+   "group": null
+  },
+  {
+   "id": "A38_step2_sample2",
+   "split": "test",
+   "image": "extracted/test/images/A38_step2_sample2_image.png",
+   "group": null
+  },
+  {
+   "id": "A51_step3_sample3",
+   "split": "test",
+   "image": "extracted/test/images/A51_step3_sample3_image.png",
+   "group": null
+  },
+  {
+   "id": "A63_step2_sample3",
+   "split": "test",
+   "image": "extracted/test/images/A63_step2_sample3_image.png",
+   "group": null
+  },
+  {
+   "id": "A87_step1_sample4",
+   "split": "test",
+   "image": "extracted/test/images/A87_step1_sample4_image.png",
+   "group": null
+  }
+ ]
+}

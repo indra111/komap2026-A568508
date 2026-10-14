@@ -1,0 +1,86 @@
+{
+ "id": "opus-lov16-2head-al3ni110-crfbw05-psi100",
+ "description": "Teacher (8): x1.5 DINOv3 Large EMA 9.4% + x1.5 Large EMA+LLRD+Lovasz-ft 16ep 15% + x1.5 Large 30ep 9.4% + x1.5 HRNet-OCR s1/s2/30ep 9.4% each + x2.0 HRNet-OCR 18.9% + DINOv2 Base he50 18.9% (weights from split-half coordinate search) -> average of Stage45 focused head and opus-refiner-lh-v1 (D4 each) -> DenseCRF micro_edges with bilateral_weight 0.5 -> RankIoU. Al3Ni x1.1, primary-Si < 100 px -> eutectic Si.",
+ "members": [
+  {
+   "file": "runs/opus-scale-norm-dinov3-x1p5-ema/best.pth",
+   "weight": 0.09444444444444444,
+   "processing": "raw",
+   "scale_norm": true,
+   "base_scale": 1.5
+  },
+  {
+   "file": "runs/opus-scale-norm-large-x1p5-llrd-lovasz-ft16/best.pth",
+   "weight": 0.15,
+   "processing": "raw",
+   "scale_norm": true,
+   "base_scale": 1.5
+  },
+  {
+   "file": "runs/opus-scale-norm-large-x1p5-e30/best.pth",
+   "weight": 0.09444444444444444,
+   "processing": "raw",
+   "scale_norm": true,
+   "base_scale": 1.5
+  },
+  {
+   "file": "runs/opus-scale-norm-hrnet-x1p5-v1/best.pth",
+   "weight": 0.09444444444444444,
+   "processing": "raw",
+   "scale_norm": true,
+   "base_scale": 1.5
+  },
+  {
+   "file": "runs/opus-scale-norm-hrnet-x1p5-s2/best.pth",
+   "weight": 0.09444444444444444,
+   "processing": "raw",
+   "scale_norm": true,
+   "base_scale": 1.5
+  },
+  {
+   "file": "runs/opus-scale-norm-hrnet-x1p5-e30-s5/best.pth",
+   "weight": 0.09444444444444444,
+   "processing": "raw",
+   "scale_norm": true,
+   "base_scale": 1.5
+  },
+  {
+   "file": "runs/opus-scale-norm-hrnet-x2p0-s6/best.pth",
+   "weight": 0.18888888888888888,
+   "processing": "raw",
+   "scale_norm": true,
+   "base_scale": 2.0
+  },
+  {
+   "file": "runs/target80-dpt-dinov2-base-detail-bf16-v1/best.pth",
+   "weight": 0.18888888888888888,
+   "processing": "he50"
+  }
+ ],
+ "mode": "d4_crf",
+ "class_factors": [
+  1.0,
+  1.0,
+  1.1,
+  1.0
+ ],
+ "psi_min_area": 100,
+ "heads": [
+  {
+   "file": "runs/target100-focused-warm-uniform-v1/best.pth",
+   "weight": 0.5
+  },
+  {
+   "file": "runs/opus-refiner-lh-v1/best.pth",
+   "weight": 0.5
+  }
+ ],
+ "crf": {
+  "iterations": 5,
+  "spatial_sigma": 1.0,
+  "spatial_weight": 0.25,
+  "bilateral_sigma": 3.0,
+  "color_sigma": 13.0,
+  "bilateral_weight": 0.5
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "recipe": "review/opus/recipe-lov16-2head-al3ni110-crfbw05-psi100.json",
+ "files": [
+  {
+   "path": "runs/opus-scale-norm-dinov3-x1p5-ema/best.pth",
+   "asset": "opus-scale-norm-dinov3-x1p5-ema.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/opus-scale-norm-dinov3-x1p5-ema.pth",
+   "bytes": 1265448349,
+   "sha256": "f6f92e6f59070bb984805b3795c54383e7d6099091b7cb26608b76e9a19cf45d"
+  },
+  {
+   "path": "runs/opus-scale-norm-large-x1p5-llrd-lovasz-ft16/best.pth",
+   "asset": "opus-scale-norm-large-x1p5-llrd-lovasz-ft16.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/opus-scale-norm-large-x1p5-llrd-lovasz-ft16.pth",
+   "bytes": 1270610277,
+   "sha256": "76a494b648e054498c123b1a01a6be26b33084c8fa76f31666fe3a516e583b8b"
+  },
+  {
+   "path": "runs/opus-scale-norm-large-x1p5-e30/best.pth",
+   "asset": "opus-scale-norm-large-x1p5-e30.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/opus-scale-norm-large-x1p5-e30.pth",
+   "bytes": 1270610149,
+   "sha256": "3d3a3a264fb0a4deaf5ef5a95c1443af1f4b01b215eed0d579f2ca0d588637e7"
+  },
+  {
+   "path": "runs/opus-scale-norm-hrnet-x1p5-v1/best.pth",
+   "asset": "opus-scale-norm-hrnet-x1p5-v1.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/opus-scale-norm-hrnet-x1p5-v1.pth",
+   "bytes": 282434213,
+   "sha256": "f4c99436042c68203ecf6977adc1786c4b1ead693fbdabd8199b10f2ba43c028"
+  },
+  {
+   "path": "runs/opus-scale-norm-hrnet-x1p5-s2/best.pth",
+   "asset": "opus-scale-norm-hrnet-x1p5-s2.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/opus-scale-norm-hrnet-x1p5-s2.pth",
+   "bytes": 282434661,
+   "sha256": "6cca86493aed9827cc46818a8c48fc0f1b5c274500b014f9522da225a401d1fd"
+  },
+  {
+   "path": "runs/opus-scale-norm-hrnet-x1p5-e30-s5/best.pth",
+   "asset": "opus-scale-norm-hrnet-x1p5-e30-s5.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/opus-scale-norm-hrnet-x1p5-e30-s5.pth",
+   "bytes": 282434725,
+   "sha256": "57bfb19661ce89ed8637e87a2292c0f58187d631bb6972d5b8065c0759785a3b"
+  },
+  {
+   "path": "runs/opus-scale-norm-hrnet-x2p0-s6/best.pth",
+   "asset": "opus-scale-norm-hrnet-x2p0-s6.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/opus-scale-norm-hrnet-x2p0-s6.pth",
+   "bytes": 282434725,
+   "sha256": "8f0c048adb2fb9f84339d64671de5c15642ce1d17c4c668e4124dc0996000930"
+  },
+  {
+   "path": "runs/target80-dpt-dinov2-base-detail-bf16-v1/best.pth",
+   "asset": "target80-dpt-dinov2-base-detail-bf16-v1.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/target80-dpt-dinov2-base-detail-bf16-v1.pth",
+   "bytes": 383994349,
+   "sha256": "6837ece0a496bb1fb5e8f261c69a4306d5032d3f8a9d90561eda526e667f901e"
+  },
+  {
+   "path": "runs/target100-focused-warm-uniform-v1/best.pth",
+   "asset": "target100-focused-warm-uniform-v1.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/target100-focused-warm-uniform-v1.pth",
+   "bytes": 523333,
+   "sha256": "010271d0c2ebf485e9bd86922db5fe1b48e210473baf67251064aa837ea2fa2a"
+  },
+  {
+   "path": "runs/opus-refiner-lh-v1/best.pth",
+   "asset": "opus-refiner-lh-v1.pth",
+   "url": "https://github.com/indra111/komap2026-A568508/releases/download/v1.0/opus-refiner-lh-v1.pth",
+   "bytes": 523845,
+   "sha256": "6c735b8dd675d69ef44edba51844343ec1e9d2fec96b82ececb329e552453b18"
+  }
+ ]
+}
